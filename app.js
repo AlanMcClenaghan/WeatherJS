@@ -1,6 +1,9 @@
 // Initialisr weather object
 const weather = new Weather('London', 'UK');
 
+// Initialisr weather object
+const ui = new UI();
+
 // Changing city and state
 // weather.changeLocation('New York', 'NY')
 
@@ -10,7 +13,7 @@ document.addEventListener('DOMContentLoaded', getWeather)
 function getWeather() {
   weather.getWeather()
     .then(results => {
-      console.log(results);
+      ui.paint(results);
     })
     .catch(err => console.log(err));
 }

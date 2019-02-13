@@ -14,8 +14,7 @@ class UI {
   paint(weather) {
     this.location.textContent = weather.display_location.full;
     this.desc.textContent = weather.weather;
-    this.string.innerHTML = `${weather.temp_c} &#176;C`;
-    // this.details.textContent = weather.display_location.full;
+    this.string.innerHTML = weather.temperature_string;
     this.icon.setAttribute('src', weather.icon_url);
     this.humidity.textContent = `Relative Humidity: ${weather.relative_humidity}`;
     this.dewpoint.textContent = `Dewpoint: ${weather.dewpoint_string}`;
